@@ -56,9 +56,9 @@
 		550BAD0E1F809D060073A86D /* DestinationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				55D444A41F809FC00058D280 /* MapViewController.swift */,
 				550BAD0F1F809D060073A86D /* AppDelegate.swift */,
 				550BAD111F809D060073A86D /* ViewController.swift */,
+				55D444A41F809FC00058D280 /* MapViewController.swift */,
 				550BAD131F809D060073A86D /* Main.storyboard */,
 				550BAD161F809D060073A86D /* Assets.xcassets */,
 				550BAD181F809D060073A86D /* LaunchScreen.storyboard */,

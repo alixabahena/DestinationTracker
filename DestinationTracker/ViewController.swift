@@ -8,6 +8,20 @@
 
 import UIKit
 
+struct location {
+    var name: String?
+    var desc: String?
+    var latitude: Double
+    var longitude: Double
+    init(name: String, desc: String, latitude: Double, longitude: Double)
+    {
+        self.name = name
+        self.desc = desc
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet var destinationNameTextField: UITextField!
@@ -16,11 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet var destinationLongitudeTextField: UITextField!
     @IBOutlet var addDestinationButton: UIButton!
     
-    var destinationName: String = ""
-    var destinationDescription: String = ""
-    var destinationLatitude: Double = 0
-    var destinationLongitude: Double = 0
-    var window: UIWindow?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,19 +47,13 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mapViewControl = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         
-        destinationName = destinationNameTextField.text!
-        destinationDescription = destinationDescriptionTextField.text!
-        destinationLatitude = Double(destinationLatitudeTextField.text!)!
-        destinationLongitude = Double(destinationLongitudeTextField.text!)!
-        print(destinationName,destinationDescription,destinationLongitude,destinationLatitude)
+        let data = location(name: destinationNameTextField.text!, desc: destinationDescriptionTextField.text!, latitude: Double(destinationLatitudeTextField.text!)!, longitude: Double(destinationLongitudeTextField.text!)!)
         
-        mapViewControl.destinationName = destinationName
-        mapViewControl.destinationDescription = destinationDescription
-        mapViewControl.destinationLatitude = destinationLatitude
-        mapViewControl.destinationLongitude = destinationLongitude
+        mapViewControl.locationsPassed.append(data)
+        
         //this creates a modal view not good
         tabBarController?.present(mapViewControl, animated: true, completion: nil)
-        
+        tabBarController?.selectedIndex = 1
 
     }
 
