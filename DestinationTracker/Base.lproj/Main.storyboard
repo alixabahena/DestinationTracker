@@ -28,6 +28,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3fY-8d-Sse"/>
                         <segue destination="2s1-Yd-osN" kind="relationship" relationship="viewControllers" id="RT3-kX-NYB"/>
+                        <segue destination="2s1-Yd-osN" kind="show" identifier="showMap" id="hly-s8-GkE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpe-N6-bb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +89,6 @@
                                 </state>
                                 <connections>
                                     <action selector="addDestinationButtonClickedWithAddDestination:" destination="BYZ-38-t0r" eventType="touchDown" id="AlY-Sa-xMl"/>
-                                    <segue destination="2s1-Yd-osN" kind="show" identifier="showMap" id="cBf-TL-z83"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your destination's:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-vG-jAp">
@@ -166,6 +166,6 @@
         <image name="PinIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cBf-TL-z83"/>
+        <segue reference="hly-s8-GkE"/>
     </inferredMetricsTieBreakers>
 </document>

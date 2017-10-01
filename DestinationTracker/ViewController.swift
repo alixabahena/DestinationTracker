@@ -13,6 +13,13 @@ struct location {
     var desc: String?
     var latitude: Double
     var longitude: Double
+    init()
+    {
+        name = "Test"
+        desc = "testing"
+        latitude = 29
+        longitude = -95
+    }
     init(name: String, desc: String, latitude: Double, longitude: Double)
     {
         self.name = name
@@ -30,11 +37,12 @@ class ViewController: UIViewController {
     @IBOutlet var destinationLongitudeTextField: UITextField!
     @IBOutlet var addDestinationButton: UIButton!
     
-    
+    var data = location()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,8 +59,14 @@ class ViewController: UIViewController {
         
         mapViewControl.locationsPassed.append(data)
         
+        let barViewControllers = self.tabBarController?.viewControllers
+        let svc = barViewControllers![1] as! MapViewController
+        svc.data = self.data
+        svc.locationsPassed.append(data)
+        
         //this creates a modal view not good
-        tabBarController?.present(mapViewControl, animated: true, completion: nil)
+        //tabBarController?.performSegue(withIdentifier: "showMap", sender: true)
+        
         tabBarController?.selectedIndex = 1
 
     }

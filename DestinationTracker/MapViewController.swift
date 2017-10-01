@@ -15,6 +15,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     var destinationDescription: String = ""
     var destinationLatitude: Double = 0
     var destinationLongitude: Double = 0
+    var data = location()
     
     var locationsPassed = [location]()
     
@@ -22,7 +23,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       // gatherPassedData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +32,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
         
         print("mapview called")
         createMapView()
-       gatherPassedData()
+       //gatherPassedData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,8 +48,9 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     }
     
     func gatherPassedData(){
-        
+        print("func gatherpasseddata called")
         for (index, _) in locationsPassed.enumerated(){
+            
             let location = CLLocationCoordinate2DMake(CLLocationDegrees(locationsPassed[index].latitude), CLLocationDegrees(locationsPassed[index].longitude))
             let span = MKCoordinateSpanMake(10, 10)
             let region = MKCoordinateRegion(center: location, span: span)
@@ -61,6 +63,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
             mapView.addAnnotation(dropPin)
             print("iteration num: ")
             print(index)
+            print(locationsPassed[index].name)
         }
        
     }
