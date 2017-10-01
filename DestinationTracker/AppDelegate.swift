@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  DestinationTracker
 //
-//  Created by Alixa Bahena on 9/30/17.
-//  Copyright © 2017 Alixa Bahena. All rights reserved.
+//  Created by Ali on 9/26/17.
+//  Copyright © 2017 AlixaBahena. All rights reserved.
 //
 
 import UIKit
