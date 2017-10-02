@@ -63,7 +63,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
             mapView.addAnnotation(dropPin)
             print("iteration num: ")
             print(index)
-            print(locationsPassed[index].name)
+            print(locationsPassed[index].name!)
         }
        
     }
