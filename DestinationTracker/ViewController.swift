@@ -44,6 +44,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
     }
+    
+    //clears text of all fields and sets focus to name field
+    override func viewDidAppear(_ animated: Bool) {
+        destinationNameTextField.becomeFirstResponder()
+        destinationNameTextField.text = ""
+        destinationDescriptionTextField.text = ""
+        destinationLatitudeTextField.text = ""
+        destinationLongitudeTextField.text = ""
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
