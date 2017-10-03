@@ -16,10 +16,21 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     var destinationLatitude: Double = 0
     var destinationLongitude: Double = 0
     var data = location()
-    
     var locationsPassed = [location]()
     
     @IBOutlet var mapView: MKMapView!
+    @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .hybrid
+        case 2:
+            mapView.mapType = .satellite
+        default:
+            mapView.mapType = .standard
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

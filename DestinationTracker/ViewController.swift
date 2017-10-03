@@ -72,10 +72,6 @@ class ViewController: UIViewController {
         let svc = barViewControllers![1] as! MapViewController
         svc.data = self.data
         svc.locationsPassed.append(data)
-        
-        //this creates a modal view not good
-        //tabBarController?.performSegue(withIdentifier: "showMap", sender: true)
-        
         tabBarController?.selectedIndex = 1
 
     }

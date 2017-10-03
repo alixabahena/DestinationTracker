@@ -163,6 +163,9 @@
                                     <segment title="Hybrid"/>
                                     <segment title="Sateliite"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlActionWithSender:" destination="2UV-Bg-R2n" eventType="valueChanged" id="wkX-ZR-ZrM"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
