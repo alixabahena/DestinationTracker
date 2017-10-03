@@ -23,21 +23,17 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // gatherPassedData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Create and Add MapView to our main view
         
-        print("mapview called")
         createMapView()
-       //gatherPassedData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("mapView did appear called")
         gatherPassedData()
     }
     
@@ -48,7 +44,6 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     }
     
     func gatherPassedData(){
-        print("func gatherpasseddata called")
         for (index, _) in locationsPassed.enumerated(){
             
             let location = CLLocationCoordinate2DMake(CLLocationDegrees(locationsPassed[index].latitude), CLLocationDegrees(locationsPassed[index].longitude))
@@ -61,9 +56,6 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
             dropPin.title = locationsPassed[index].name
             dropPin.subtitle = locationsPassed[index].desc
             mapView.addAnnotation(dropPin)
-            print("iteration num: ")
-            print(index)
-            print(locationsPassed[index].name!)
         }
        
     }
