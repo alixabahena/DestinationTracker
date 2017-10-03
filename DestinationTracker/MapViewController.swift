@@ -50,11 +50,11 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
     
 
     
-    func createMapView(){
+    func createMapView() {
         mapView.mapType = MKMapType.standard
     }
     
-    func gatherPassedData(){
+    func gatherPassedData() {
         for (index, _) in locationsPassed.enumerated(){
             
             let location = CLLocationCoordinate2DMake(CLLocationDegrees(locationsPassed[index].latitude), CLLocationDegrees(locationsPassed[index].longitude))
@@ -68,6 +68,5 @@ class MapViewController: UIViewController,  MKMapViewDelegate {
             dropPin.subtitle = locationsPassed[index].desc
             mapView.addAnnotation(dropPin)
         }
-       
     }
 }
