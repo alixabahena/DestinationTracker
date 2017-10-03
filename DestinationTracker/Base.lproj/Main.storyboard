@@ -48,7 +48,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-IZ-amV">
-                                <rect key="frame" x="43" y="288.5" width="289" height="30"/>
+                                <rect key="frame" x="43" y="288.5" width="289.5" height="30"/>
                                 <color key="textColor" red="0.12868516683594125" green="0.24521888526117663" blue="0.7448517628205128" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no"/>
@@ -60,7 +60,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-pL-u7K">
-                                <rect key="frame" x="43" y="196.5" width="289" height="30"/>
+                                <rect key="frame" x="43" y="196.5" width="289.5" height="30"/>
                                 <color key="textColor" red="0.12868516683594125" green="0.24521888526117663" blue="0.7448517628205128" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
@@ -81,6 +81,11 @@
                                 <state key="normal" title="Add Destination">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addDestinationButtonClickedWithAddDestination:" destination="BYZ-38-t0r" eventType="touchDown" id="AlY-Sa-xMl"/>
                                 </connections>
@@ -94,32 +99,32 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91425318971893499" green="0.90983650764299806" blue="0.91866987179487181" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0J8-a7-Pgo" secondAttribute="trailing" constant="27" id="3w7-QE-aWp"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="0J8-a7-Pgo" secondAttribute="trailing" constant="27" id="3w7-QE-aWp"/>
                             <constraint firstItem="WtI-UY-lah" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4AL-hi-6G1"/>
                             <constraint firstItem="FF7-IZ-amV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6co-GS-95N"/>
-                            <constraint firstItem="WtI-UY-lah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="6sR-5b-qkS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FF7-IZ-amV" secondAttribute="trailing" constant="27" id="738-4J-SIj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c4t-vG-jAp" secondAttribute="trailing" constant="27" id="79s-37-N4F"/>
+                            <constraint firstItem="WtI-UY-lah" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="6sR-5b-qkS"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="FF7-IZ-amV" secondAttribute="trailing" constant="27" id="738-4J-SIj"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="c4t-vG-jAp" secondAttribute="trailing" constant="27" id="79s-37-N4F"/>
                             <constraint firstItem="h5y-Gz-O7m" firstAttribute="top" secondItem="FF7-IZ-amV" secondAttribute="bottom" constant="16" id="8uJ-m7-xjY"/>
-                            <constraint firstItem="bkl-pL-u7K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="EAc-gD-Zra"/>
+                            <constraint firstItem="bkl-pL-u7K" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="EAc-gD-Zra"/>
                             <constraint firstItem="c4t-vG-jAp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWI-R3-Xwk"/>
                             <constraint firstItem="cu4-YC-bd8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="J38-xg-KWe"/>
                             <constraint firstItem="0J8-a7-Pgo" firstAttribute="top" secondItem="bkl-pL-u7K" secondAttribute="bottom" constant="16" id="NAZ-ul-qlW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bkl-pL-u7K" secondAttribute="trailing" constant="27" id="RiC-Cy-su3"/>
-                            <constraint firstItem="h5y-Gz-O7m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="SaY-IA-T1A"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="bkl-pL-u7K" secondAttribute="trailing" constant="27" id="RiC-Cy-su3"/>
+                            <constraint firstItem="h5y-Gz-O7m" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="SaY-IA-T1A"/>
                             <constraint firstItem="h5y-Gz-O7m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VTc-TV-DnG"/>
                             <constraint firstItem="0J8-a7-Pgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xv6-3d-ZBu"/>
                             <constraint firstAttribute="trailing" secondItem="cu4-YC-bd8" secondAttribute="trailing" id="aeD-I3-6Oh"/>
-                            <constraint firstItem="c4t-vG-jAp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="bh8-5m-LzX"/>
+                            <constraint firstItem="c4t-vG-jAp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="bh8-5m-LzX"/>
                             <constraint firstItem="FF7-IZ-amV" firstAttribute="top" secondItem="0J8-a7-Pgo" secondAttribute="bottom" constant="16" id="c0Z-ai-199"/>
                             <constraint firstItem="bkl-pL-u7K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cde-Tr-pU0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="h5y-Gz-O7m" secondAttribute="trailing" constant="27" id="e7c-bx-Ly1"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="h5y-Gz-O7m" secondAttribute="trailing" constant="27" id="e7c-bx-Ly1"/>
                             <constraint firstItem="bkl-pL-u7K" firstAttribute="top" secondItem="c4t-vG-jAp" secondAttribute="bottom" constant="16" id="eRC-rd-zoB"/>
                             <constraint firstItem="WtI-UY-lah" firstAttribute="top" secondItem="h5y-Gz-O7m" secondAttribute="bottom" constant="45" id="geC-7l-L4t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WtI-UY-lah" secondAttribute="trailing" constant="27" id="ky1-0C-yag"/>
-                            <constraint firstItem="FF7-IZ-amV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="sF3-9b-KOc"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="WtI-UY-lah" secondAttribute="trailing" constant="27" id="ky1-0C-yag"/>
+                            <constraint firstItem="FF7-IZ-amV" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="sF3-9b-KOc"/>
                             <constraint firstItem="cu4-YC-bd8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tnD-Y7-S0O"/>
-                            <constraint firstItem="0J8-a7-Pgo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="uMM-2a-ceg"/>
+                            <constraint firstItem="0J8-a7-Pgo" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="uMM-2a-ceg"/>
                             <constraint firstItem="c4t-vG-jAp" firstAttribute="top" secondItem="cu4-YC-bd8" secondAttribute="bottom" constant="90" id="xHo-e8-opy"/>
                         </constraints>
                     </view>
